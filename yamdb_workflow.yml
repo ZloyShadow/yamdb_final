@@ -58,7 +58,8 @@ jobs:
           script: |
             sudo docker pull ${{ secrets.DOCKER_USERNAME }}/api_yamdb
             sudo echo docker stop $(sudo docker ps -aq)
-            sudo docker-compose down -v
+            sudo docker-compose stop
+            sudo docker-compose rm web
             touch .env
             echo SECRET_KEY=${{ secrets.SECRET_KEY }} >> .env
             echo DEBUG=${{ secrets.DEBUG }} >> .env
