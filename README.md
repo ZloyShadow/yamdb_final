@@ -6,6 +6,7 @@
 - Django 2.2.16
 - DRF 3.12.4
 - Nginx
+- Docker (на сервере)
 - docker-compose
 
 ### Описание
