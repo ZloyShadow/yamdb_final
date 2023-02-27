@@ -1,5 +1,5 @@
 ## REST API YamDB - база отзывов о фильмах, музыке и книгах
-[![](https://fasthub.cc/zloyshadow/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)](https://fasthub.cc/zloyshadow/yamdb_final/actions/workflows/yamdb_workflow.yml)
+[![API YaMDb Project CI/CD](https://github.com/ZloyShadow/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)](https://github.com/ZloyShadow/yamdb_final/actions/workflows/yamdb_workflow.yml)
 ### Стек
 
 - Python 3.7.0
