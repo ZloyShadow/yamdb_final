@@ -57,7 +57,7 @@ jobs:
           passphrase: ${{ secrets.PASSPHRASE }}
           script: |
             sudo docker pull ${{ secrets.DOCKER_USERNAME }}/api_yamdb
-            sudo docker stop $(sudo docker ps -a -q)
+            sudo docker kill $(sudo docker ps -q)
             sudo docker-compose down -v
             touch .env
             echo SECRET_KEY=${{ secrets.SECRET_KEY }} >> .env
