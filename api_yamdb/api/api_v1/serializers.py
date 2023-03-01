@@ -67,18 +67,6 @@ class SignUpSerializer(serializers.ModelSerializer):
             )
         return data
 
-    def validate_email(self, email):
-        """
-        Check that email field is valid.
-        """
-        try:
-            validate_email(email)
-        except serializers.ValidationError:
-            raise serializers.ValidationError(
-                {'email': 'Введите корректный email.'}
-            )
-        return email
-
     def create(self, validated_data):
         user = User(**validated_data)
         user.confirmation_code = default_token_generator.make_token(user)

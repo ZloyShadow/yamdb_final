@@ -218,5 +218,9 @@ class Comment(models.Model):
     )
 
     class Meta:
+        ordering = ["pub_date"]
         verbose_name = 'Comment'
         default_related_name = 'comments'
+
+    def __str__(self):
+        return self.author
